@@ -63,7 +63,7 @@ async function predict(imgElement) {
     const normalized = img.div(255.0);
 
     // Reshape to a single-element batch so we can pass it to predict.
-    const batched = normalized.reshape([1, IMAGE_SIZE, IMAGE_SIZE, 3]);
+    const batched = normalized.reshape([null, IMAGE_SIZE, IMAGE_SIZE, 3]);
 
     startTime2 = performance.now();
     // Make a prediction through my_model.
