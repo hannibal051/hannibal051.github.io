@@ -28,7 +28,7 @@ const demo = async () => {
   // Make a prediction through the locally hosted cat.jpg.
   const catElement = document.getElementById('cat');
   
-  my_model.predict(catElement);
+  my_model.predict(tf.zeros([1, IMAGE_SIZE, IMAGE_SIZE, 3]));
   if (catElement.complete && catElement.naturalHeight !== 0) {
     predict(catElement);
     catElement.style.display = '';
